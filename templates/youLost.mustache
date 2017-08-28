@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <title>Hangman
+  </title>
+</head>
+
+<body id="lost">
+
+  <div id="wrapper">
+    <h2>hangman
+    </h2>
+
+    <div id = "mysteryWord">
+
+      {{ #mysteryWord }}
+        {{ letter }}
+      {{ /mysteryWord }}
+
+    </div>
+
+    <div id="chancesLeft"> You Have Lost...
+    </div>
+
+    <form method="post" action="/youLost">
+      <input id="refresh" type="submit" value="Try again?">
+    </form>
+
+    <div id="letterChoice">
+
+      {{ #vowels }}
+      <form method="post" action="/hangman/{{ . }}">
+        <input id="vowels" type="submit" value={{ . }}>
+      </form>
+      {{ /vowels }}
+
+      <br>
+
+      {{ #nonVowels }}
+      <form method="post" action="/hangman/{{ . }}">
+        <input id="nonVowels" type="submit" value={{ . }}>
+      </form>
+      {{ /nonVowels }}
+
+    </div>
+
+  </div>
+
+</body>

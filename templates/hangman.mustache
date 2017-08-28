@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <title>Hangman
+  </title>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <h2>hangman
+    </h2>
+
+    <div id = "mysteryWord">
+
+      {{ #mysteryWord }}
+
+        {{ ^visible }} _ {{ /visible }}
+
+        {{ #visible}} {{ letter }} {{ /visible}}
+
+      {{ /mysteryWord }}
+
+    </div>
+
+    <div id="lettersGuessed"> Letters Guessed: {{ lettersGuessed }}
+    </div>
+
+    <div id="chancesLeft"> You Have {{ chances }} Tries Left
+    </div>
+
+
+    <div id="letterChoice">
+
+      {{ #vowels }}
+      <form method="post" action="/hangman/{{ . }}">
+        <input id="vowels" type="submit" value={{ . }}>
+      </form>
+      {{ /vowels }}
+
+      <br>
+
+      {{ #nonVowels }}
+      <form method="post" action="/hangman/{{ . }}">
+        <input id="nonVowels" type="submit" value={{ . }}>
+      </form>
+      {{ /nonVowels }}
+
+    </div>
+
+  </div>
+
+</body>

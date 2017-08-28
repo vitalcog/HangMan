@@ -1,0 +1,73 @@
+/* colors
+    #a38f72   orang-ish
+    #b5925f   orang-ish
+    #51504e   gray-ish
+    #d8c295   tan-ish       */
+
+body {
+  background-image: url('/westernBground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#lost {
+  background-image: url('/loseIMG.jpg');
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+#mysteryWord {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+#lettersGuessed {
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+#chancesLeft {
+  font-size: 2em;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+#letterChoice {
+  margin-top: 5%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 410px;
+}
+
+input {
+  background-color: #b5925f;
+  outline: none;
+  border-radius: 10%;
+  margin-top: 10px;
+  width: 60px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#vowels {
+  margin-bottom: 20px;
+}
+
+
+#refresh {
+  width: 125px;
+}
